@@ -11,8 +11,15 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          
+          - triple: 'x86_64-linux-gnu'
+            target: 'linux'
+
+          - triple: 'aarch64-linux-gnu'
+            target: 'linux'
+
           - triple: 'x86_64-windows-msvc'
-            target: 'windows
+            target: 'windows'
 
     name: Build CLI for ${{ matrix.triple }}
 
